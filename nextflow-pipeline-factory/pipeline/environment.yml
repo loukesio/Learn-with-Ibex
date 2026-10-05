@@ -1,0 +1,8 @@
+name: nf-rnaseq-mini
+channels: [conda-forge, bioconda]
+dependencies:
+  - fastqc
+  - salmon=1.10
+  - bioconductor-deseq2
+  - bioconductor-tximport
+  - r-ggplot2
