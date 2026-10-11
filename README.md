@@ -2,7 +2,7 @@
 
 # Learn with Ibex
 
-**Bioinformatics explained in comics. No jargon, no prior knowledge needed.**
+**Bioinformatics explained in comics and carousels. No jargon, no prior knowledge needed.**
 
 <img src="nextflow-pipeline-factory/episodes/ep1/ep1-01-cover.jpg" width="420" alt="The Pipeline Factory, Episode 1">
 
@@ -37,6 +37,21 @@ Swipe through an episode below, or download the PDF.
 | Conveyor belt | a **channel**: carries data between steps |
 | Labelled box | one **sample**: its name plus its two read files |
 | Shelf | a **value channel**: shared by every step, never used up |
+
+---
+
+## Bioinformatics plots in R
+
+Six R packages that turn tables of genes into figures: ggvolc, ggsynteny, ggraph, ggtree, ggiraph, patchwork.
+Every plot is real R output, and the scripts are in [`bioinfo-plots-in-r/`](bioinfo-plots-in-r).
+
+<p align="center">
+  <img src="bioinfo-plots-in-r/slides/slide-01.png" width="200">
+  <img src="bioinfo-plots-in-r/slides/slide-02.png" width="200">
+  <img src="bioinfo-plots-in-r/slides/slide-05.png" width="200">
+</p>
+
+[Slides and code](bioinfo-plots-in-r) · *Next: handling sequences and genomic ranges.*
 
 ---
 
