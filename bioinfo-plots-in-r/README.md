@@ -1,42 +1,36 @@
-# Bioinformatics plots in R
+# Bioinformatics plots in R · Instagram carousel
 
-The code behind the Ibex Instagram carousel **"Bioinformatics plots in R"**: six packages that turn tables of genes into figures.
-Every plot in the carousel is real R output from the scripts in [`R/`](R).
+8 square slides (1080×1080) teaching six R packages: ggvolc, ggsynteny, ggraph, ggtree, ggiraph, patchwork.
+Every plot is real R output; the slides are a static HTML page screenshotted with headless Chrome.
 
-<p align="center">
-  <img src="slides/slide-01.png" width="200">
-  <img src="slides/slide-02.png" width="200">
-  <img src="slides/slide-03.png" width="200">
-  <img src="slides/slide-05.png" width="200">
-</p>
-
-| # | Package | Plot | Script | Data |
-|---|---|---|---|---|
-| 01 | [ggvolc](https://github.com/loukesio/ggvolc) | volcano plot | [`R/01_volcano.R`](R/01_volcano.R) | `ggvolc::all_genes`, 4,857 yeast genes from DESeq2 |
-| 02 | [ggsynteny](https://github.com/loukesio/ggsynteny) | circular synteny + annotation rings | [`R/02b_synteny_circular.R`](R/02b_synteny_circular.R) (linear: [`R/02_synteny.R`](R/02_synteny.R)) | `ggsynteny::rice_sorghum`, 100 blocks; rings = genes per 2 Mb and block score, both from the block table |
-| 03 | [ggraph](https://ggraph.data-imaginist.com) | network | [`R/03_network.R`](R/03_network.R) | simulated scale-free graph, 40 nodes |
-| 04 | [ggtree](https://yulab-smu.top/treedata-book/) | annotated phylogeny | [`R/04_tree.R`](R/04_tree.R) | Caprinae, 8 species (illustrative topology and support values) |
-| 05 | [ggiraph](https://davidgohel.github.io/ggiraph/) | interactive PCA | [`R/05_pca.R`](R/05_pca.R) | simulated expression, 24 samples, real `prcomp` |
-| 06 | [patchwork](https://patchwork.data-imaginist.com) | Figure 1 | [`R/06_patchwork.R`](R/06_patchwork.R) | the plots above |
-
-Hover the PCA yourself: open [`plots/pca_interactive.html`](plots/pca_interactive.html) in a browser.
-
-## Run it
-
-```r
-install.packages(c("ggvolc", "ggraph", "tidygraph", "igraph", "ape", "ggiraph", "patchwork", "ragg"))
-BiocManager::install("ggtree")
-remotes::install_github("loukesio/ggsynteny")   # >= 0.5.0 for the circular layout
+```
+R/            one script per plot + theme_ibex.R (shared look)
+plots/        rendered PNGs (6×4.2 in, 300 dpi) + pca_interactive.html
+carousel/     slides.html (?s=N shows one slide), fonts/, logo, shoot.sh
+output/       slide-01..08.png (1080×1080) + caption.txt
 ```
 
-Install the [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) font, then from this folder:
+## Rebuild
 
 ```bash
-Rscript R/render_all.R     # writes plots/*.png
+Rscript R/render_all.R      # plots/*.png
+carousel/shoot.sh           # output/slide-0N.png (1080×1080)
 ```
 
-All plots share one theme, [`R/theme_ibex.R`](R/theme_ibex.R): IBM Plex Mono, black axes, no grid, one accent colour.
+Needs R with ggvolc, ggsynteny, ggraph, tidygraph, igraph, ggtree, ape, ggiraph, patchwork, ragg,
+and the IBM Plex Mono font installed system-wide. Anton / Archivo / Plex Mono for the slides are in `carousel/fonts/`.
 
-## The slides
+## Data
 
-[`slides/`](slides) holds the eight 1080×1350 images. The slide layout is a static HTML page rendered with headless Chrome.
+| Slide | Data |
+|---|---|
+| ggvolc | `ggvolc::all_genes`, 4,857 yeast genes (DESeq2 output), labels: top 2 up + top 2 down |
+| ggsynteny | `ggsynteny::rice_sorghum`, 100 blocks, 12 rice vs 10 sorghum chromosomes. Slide 3 shows the circular layout (`R/02b_synteny_circular.R`) with two rings computed from the block table: genes per 2 Mb window and log block score. Needs ggsynteny ≥ 0.5.0 (GitHub). The linear version is used in the patchwork slide. |
+| ggraph | simulated scale-free network (`igraph::sample_pa`, 40 nodes, seed 7); hubs = top 4 by degree |
+| ggtree | hand-written Newick for 8 Caprinae species (illustrative topology; node labels are illustrative bootstrap values) |
+| ggiraph | simulated expression (24 samples, 500 genes, 150 responsive) then a real `prcomp` PCA |
+| patchwork | the three plots above |
+
+The design reference is `../design_handoff_bioinfo_carousel/`. Copy changes vs. that design: the ggvolc and
+ggsynteny code uses the packages' real signatures, the synteny slide shows rice vs sorghum (the bundled data)
+instead of ibex vs sheep, and the ggiraph tooltip is drawn inside the plot.
