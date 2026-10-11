@@ -10,5 +10,5 @@ ibexvcf/
 │   ├── nf-core/vcf2maf/
 │   └── local/vcfstatsplot/
 ├── bin/single_vcf_stats.py
-├── conf/  assets/  docs/  tests/
-└── .github/workflows/  (CI)
+├── conf/  assets/  docs/
+└── .github/workflows/  CI
