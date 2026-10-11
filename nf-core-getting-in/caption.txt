@@ -1,0 +1,22 @@
+🏭 Getting into nf-core: from a GitHub issue to a release with a DOI. The 7 steps every nf-core pipeline goes through. Part 2 of 2.
+
+Swipe through 👉
+
+1️⃣ Propose: a GitHub issue in nf-core/proposals with a fixed form. Name, keywords, a schematic, the minimal first release, why it is new, who wants it. 133 proposals so far, 65 accepted, 20 merged into an existing pipeline.
+2️⃣ Review: a bot counts the votes. Two core team members, or one core member plus one maintainer, type /approve. Overlap with an existing pipeline means you join that one instead.
+3️⃣ Onboarding: a Slack channel for your pipeline, the maintainer channels, and a branch with your name in nf-core/test-datasets.
+4️⃣ Build on your own account first: three branches, lint often, nf-test, a test profile that points at your test data.
+5️⃣ Transfer: ask in #request-core, then transfer ownership of the repo to the nf-core organisation. Never fork it.
+6️⃣ Release PR: bump to 1.0.0, lint in release mode, open dev → main, trade reviews. Two approvals, at least one from core or maintainers.
+7️⃣ Release: publish the tag. The website updates, the full test runs on AWS, and Zenodo mints a DOI.
+
+Every screenshot is a real public page: the nf-core/genomeannotation proposal (accepted October 2026), the nf-core/genomeqc 1.0.0 release, and the nf-core contributing docs. Process as documented on nf-co.re on 11 October 2026.
+
+Part 1 showed how to build the pipeline from your scripts. Both parts are on GitHub: link in bio 🐐
+
+💾 Save this for your first proposal
+🔁 Share it with your lab
+
+Which step scares you most? Tell me in the comments 👇
+
+#Nextflow #nfcore #Bioinformatics #OpenScience #Pipelines

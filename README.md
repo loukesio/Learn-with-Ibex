@@ -40,6 +40,19 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## Getting into nf-core (nf-core, part 2)
+
+How a pipeline is proposed, reviewed, transferred and released inside nf-core, in seven steps, with screenshots of the real pages:
+a proposal issue, the approval bot, a first-release pull request, a release with its DOI. Slides and sources in [`nf-core-getting-in/`](nf-core-getting-in).
+
+<p align="center">
+  <img src="nf-core-getting-in/slides/slide-01.png" width="200">
+  <img src="nf-core-getting-in/slides/slide-03.png" width="200">
+  <img src="nf-core-getting-in/slides/slide-08.png" width="200">
+</p>
+
+---
+
 ## From scripts to a pipeline (nf-core, part 1)
 
 Seven commands that turn a folder of bash and Python scripts into a Nextflow pipeline on the nf-core template, after the GCB 2025 workshop by QBiC.
