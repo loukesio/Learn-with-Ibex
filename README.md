@@ -40,6 +40,19 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## Genomic intervals in R
+
+Six packages that turn "where are my peaks?" into one line of code: GenomicRanges, plyranges, rtracklayer, GenomicFeatures, regioneR, plotgardener.
+One dataset runs through every slide: IMR-90 CTCF peaks on chr21 (ENCODE) with hg19 gene models. Scripts and data in [`genomic-intervals-in-r/`](genomic-intervals-in-r).
+
+<p align="center">
+  <img src="genomic-intervals-in-r/slides/slide-01.png" width="200">
+  <img src="genomic-intervals-in-r/slides/slide-03.png" width="200">
+  <img src="genomic-intervals-in-r/slides/slide-07.png" width="200">
+</p>
+
+---
+
 ## AI in R, no Python
 
 Six packages to chat, label, search and test with language models from R: ellmer, mall, ragnar, ollamar, btw, vitals.
