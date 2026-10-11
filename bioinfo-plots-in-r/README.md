@@ -39,4 +39,4 @@ All plots share one theme, [`R/theme_ibex.R`](R/theme_ibex.R): IBM Plex Mono, bl
 
 ## The slides
 
-[`slides/`](slides) holds the eight 1080×1350 images as posted. The slide layout is a static HTML page rendered with headless Chrome.
+[`slides/`](slides) holds the eight 1080×1440 (3:4) images as posted. The slide layout is a static HTML page rendered with headless Chrome.
