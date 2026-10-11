@@ -40,6 +40,19 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## Sequence analysis in R
+
+Six packages that take you from a FASTA file to a genome-browser view: Biostrings, blastar, msa, GenomicRanges, GenomicAlignments, Gviz.
+Scripts and data notes in [`seq-analysis-in-r/`](seq-analysis-in-r).
+
+<p align="center">
+  <img src="seq-analysis-in-r/slides/slide-01.png" width="200">
+  <img src="seq-analysis-in-r/slides/slide-04.png" width="200">
+  <img src="seq-analysis-in-r/slides/slide-07.png" width="200">
+</p>
+
+---
+
 ## Bioinformatics plots in R
 
 Six R packages that turn tables of genes into figures: ggvolc, ggsynteny, ggraph, ggtree, ggiraph, patchwork.
@@ -51,7 +64,7 @@ Every plot is real R output, and the scripts are in [`bioinfo-plots-in-r/`](bioi
   <img src="bioinfo-plots-in-r/slides/slide-05.png" width="200">
 </p>
 
-[Slides and code](bioinfo-plots-in-r) · *Next: handling sequences and genomic ranges.*
+[Slides and code](bioinfo-plots-in-r)
 
 ---
 
