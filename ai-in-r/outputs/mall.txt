@@ -1,0 +1,9 @@
+> genes |> llm_classify(description, roles)
+gene   description                    role          
+GCR1   Transcriptional activator of … transcription  ✔
+AGA2   Adhesion subunit of a-aggluti… cell adhesion  ✔
+HSP26  Small heat shock protein with… chaperone      ✔
+TFC3   Subunit of RNA polymerase III… transcription  ✔
+SSA1   ATPase involved in protein fo… transcription  ✘
+
+  4 of 5 match the curated role

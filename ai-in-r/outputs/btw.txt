@@ -1,0 +1,20 @@
+> btw(genes, "@platform_info")
+## Context
+
+genes
+| gene | log2fc | padj |
+|------|--------|------|
+| GCR1 |  2.24 | 2.2e-25 |
+| AGA2 |  3.83 | 6.7e-23 |
+| HSP26 | -2.21 | 1.1e-19 |
+
+"@platform_info"
+<system_info>
+R_VERSION: R version 4.5.1 (2025-06-13)
+OS: macOS 27.0.1
+SYSTEM: aarch64, darwin20
+LANGUAGE: (EN)
+LOCALE: en_NZ.UTF-8
+ENCODING: en_NZ.UTF-8
+TIMEZONE: Europe/Berlin
+  ...

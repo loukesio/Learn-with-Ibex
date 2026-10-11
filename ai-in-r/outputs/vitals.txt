@@ -1,0 +1,8 @@
+> tsk$eval()   # solver phi3:mini · scorer detect_includes()
+  question                           target    score
+  In DESeq2 output, what does padj … adjusted  C
+  How many codons fit in a 300 bp o… 100       I
+  Which package fits a negative bin… DESeq2    C
+  What base pairs with adenine in D… thymine   C
+
+  accuracy 75%

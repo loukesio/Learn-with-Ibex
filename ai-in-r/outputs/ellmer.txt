@@ -1,0 +1,12 @@
+> chat$chat("What does a volcano plot show?")
+A volcano plot displays the relationship
+between two variables, typically testing for
+differential expression to distinguish real
+changes from artifacts or chance findings among
+multiple test statistics on genomic studies.
+  ...
+
+> chat$chat_structured("...GCR1 and AGA2 went up, while
+    OPI10 and HSP26 went down.", type = type_de)
+$up   GCR1 AGA2
+$down OPI10 HSP26

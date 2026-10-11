@@ -40,6 +40,19 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## AI in R, no Python
+
+Six packages to chat, label, search and test with language models from R: ellmer, mall, ragnar, ollamar, btw, vitals.
+Every output came from a local model through Ollama. Scripts and captured outputs in [`ai-in-r/`](ai-in-r).
+
+<p align="center">
+  <img src="ai-in-r/slides/slide-01.png" width="200">
+  <img src="ai-in-r/slides/slide-02.png" width="200">
+  <img src="ai-in-r/slides/slide-07.png" width="200">
+</p>
+
+---
+
 ## Sequence analysis in R
 
 Six packages that take you from a FASTA file to a genome-browser view: Biostrings, blastar, msa, GenomicRanges, GenomicAlignments, Gviz.

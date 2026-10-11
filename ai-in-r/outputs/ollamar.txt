@@ -1,0 +1,10 @@
+> list_models()
+  nomic-embed-text:latest 274 MB
+  phi3:mini          2.2 GB
+
+> generate("phi3:mini", "Reverse complement of ATGGCCTAA?")
+  TTAGGCCAT
+
+> reverseComplement(DNAString("ATGGCCTAA"))  # Biostrings
+  TTAGGCCAT
+  ✔ the model got it right

@@ -1,0 +1,10 @@
+> markdown_chunk(doc, target_size = 400)
+  21 chunks embedded with nomic-embed-text
+
+> ragnar_retrieve(store, "What is a value channel?", top_k = 2)
+  #1  cosine distance 0.51 · README.md
+  ...steps | | Labelled box | one **sample**:
+  its name plus its two read files | | Shelf |
+  a **value channel**: shared by every step,
+  never used up | --- ## Sequence analysis in R
+  Six packages that take you...
