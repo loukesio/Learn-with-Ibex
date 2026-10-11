@@ -1,0 +1,15 @@
+repository_type: pipeline
+
+nf_core_version: 4.1.0
+
+lint: {}
+
+template:
+  org: nf-core
+  name: ibexvcf
+  description: Filter somatic VCFs and convert them to MAF
+  author: Loukas Theodosiou
+  version: 1.0.0dev
+  force: true
+  outdir: ibexvcf
+  is_nfcore: true

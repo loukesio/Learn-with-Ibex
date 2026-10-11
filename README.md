@@ -40,6 +40,19 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## From scripts to a pipeline (nf-core, part 1)
+
+Seven commands that turn a folder of bash and Python scripts into a Nextflow pipeline on the nf-core template, after the GCB 2025 workshop by QBiC.
+Every console panel is real nf-core tools output; the demo pipeline `ibexvcf` is in [`nf-core-scripts-to-pipeline/`](nf-core-scripts-to-pipeline).
+
+<p align="center">
+  <img src="nf-core-scripts-to-pipeline/slides/slide-01.png" width="200">
+  <img src="nf-core-scripts-to-pipeline/slides/slide-03.png" width="200">
+  <img src="nf-core-scripts-to-pipeline/slides/slide-07.png" width="200">
+</p>
+
+---
+
 ## Genomic intervals in R
 
 Six packages that turn "where are my peaks?" into one line of code: GenomicRanges, plyranges, rtracklayer, GenomicFeatures, regioneR, plotgardener.

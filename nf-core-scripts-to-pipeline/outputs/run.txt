@@ -1,0 +1,17 @@
+> nextflow run . -profile test -stub --outdir results
+nf-core/ibexvcf 1.0.0dev
+  input : assets/samplesheet_test.csv
+  fasta : test-datasets: ...genome.fasta
+  profile: test
+  [1b/efdfbe] VCF_FILTER_CONVERT:BCFTOOLS_VIEW (test2)
+  [cf/a82925] VCF_FILTER_CONVERT:BCFTOOLS_VIEW (test)
+  [87/481551] VCFSTATSPLOT (test2)
+  [ad/465f4e] VCFSTATSPLOT (test)
+  [b5/d49f96] VCF_FILTER_CONVERT:VCF2MAF (test)
+  [ed/debdfb] VCF_FILTER_CONVERT:VCF2MAF (test2)
+  [14/bfa2e4] MULTIQC (ibexvcf)
+-[nf-core/ibexvcf] Pipeline completed successfully-
+[SUCCESS] completed=7 failed=0 cached=0
+
+> ls results
+bcftools multiqc pipeline_info vcf2maf vcfstatsplot 

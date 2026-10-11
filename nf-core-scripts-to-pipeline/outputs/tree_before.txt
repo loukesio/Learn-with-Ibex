@@ -1,0 +1,11 @@
+scripts/
+├── bash/
+│   ├── conda.yml
+│   ├── filter.sh     bcftools view
+│   └── convert.sh    vcf2maf.pl
+├── py_scripts/
+│   ├── conda_py.yml
+│   ├── single_vcf_stats.py
+│   └── multiple_vcf_stats.py
+└── vcf-files/
+    └── tumor_5_vs_normal_5.vcf.gz

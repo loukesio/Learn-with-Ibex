@@ -1,0 +1,14 @@
+> conda create -n nf-core nf-core nextflow
+> conda activate nf-core
+
+> nf-core --version
+nf-core, version 4.1.0
+
+> nextflow -version
+version 26.04.7 build 13988
+
+> nf-core --help
+  pipelines      p    create, lint, bump-version, sync, schema …
+  modules        m    install, create, list, test, containers …
+  subworkflows   s    install, create, list, test …
+  test-datasets  td   list, search …

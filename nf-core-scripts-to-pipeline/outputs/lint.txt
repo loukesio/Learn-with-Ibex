@@ -1,0 +1,21 @@
+> nf-core pipelines lint
+Testing pipeline: .
+
+[!] 45 Pipeline Test Warnings
+  readme: README contains the placeholder zenodo.XXXXXXX.
+  pipeline_todos: TODO string in README.md: Include a figure that guides the
+                  user through the major workflow steps.
+  pipeline_todos: TODO string in conf/test.config: Specify the paths to your
+                  test data on nf-core/test-datasets
+  ... 42 more TODOs
+
+[!] 1 Module Test Warning     fastqc: new version available
+[!] 19 Subworkflow Test Warnings
+  vcf_filter_convert   meta_include: bcftools/view missing in meta.yml
+  ... 18 more
+
+LINT RESULTS SUMMARY
+  [✔] 256 Tests Passed
+  [?]   0 Tests Ignored
+  [!]  65 Test Warnings
+  [✗]   0 Tests Failed

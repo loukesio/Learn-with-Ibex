@@ -1,0 +1,86 @@
+name: "vcfstatsplot"
+description: write your description here
+keywords:
+  - sort
+  - example
+  - genomics
+tools:
+  - "vcfstatsplot":
+      description: ""
+      homepage: ""
+      documentation: ""
+      tool_dev_url: ""
+      doi: ""
+      licence: null
+      identifier: null
+
+input:
+  - - meta:
+        type: map
+        description: Groovy Map containing sample information. e.g. `[ id:'sample1' ]`
+    - input:
+        type: file
+        description: ""
+        pattern: ""
+        ontologies:
+          - edam: ""
+output:
+  output:
+    - - meta:
+          type: map
+          description: Groovy Map containing sample information. e.g. `[ id:'sample1' ]`
+      - "*":
+          type: file
+          description: ""
+          pattern: ""
+          ontologies:
+            - edam: ""
+  versions_vcfstatsplot:
+    - - ${task.process}:
+          type: string
+          description: The name of the process
+      - vcfstatsplot:
+          type: string
+          description: The name of the tool
+      - vcfstatsplot --version:
+          type: eval
+          description: The expression to obtain the version of the tool
+topics:
+  versions:
+    - - ${task.process}:
+          type: string
+          description: The name of the process
+      - vcfstatsplot:
+          type: string
+          description: The name of the tool
+      - vcfstatsplot --version:
+          type: eval
+          description: The expression to obtain the version of the tool
+authors:
+  - "@loukesio"
+maintainers:
+  - "@loukesio"
+containers:
+  docker:
+    linux/arm64:
+      name: community.wave.seqera.io/library/python_pandas_numpy_matplotlib-base_pruned:a72aff3dc8962307
+      build_id: bd-a72aff3dc8962307_1
+      scan_id: sc-8962fe81d338ab01_1
+    linux/amd64:
+      name: community.wave.seqera.io/library/python_pandas_numpy_matplotlib-base_pruned:68960cccb50bd6cd
+      build_id: bd-68960cccb50bd6cd_1
+      scan_id: sc-bbd1caca282afe3f_1
+  singularity:
+    linux/amd64:
+      name: oras://community.wave.seqera.io/library/python_pandas_numpy_matplotlib-base_pruned:ead1d48bd072100b
+      build_id: bd-ead1d48bd072100b_1
+      https: https://community-cr-prod.seqera.io/docker/registry/v2/blobs/sha256/bf/bfda6deaed916f55f16c6a5aaab4d83e4b38c0032d0b2e0ff8c17ad8c0c2ebc0/data
+    linux/arm64:
+      name: oras://community.wave.seqera.io/library/python_pandas_numpy_matplotlib-base_pruned:293e62745013b24a
+      build_id: bd-293e62745013b24a_1
+      https: https://community-cr-prod.seqera.io/docker/registry/v2/blobs/sha256/17/1785fec0d4b1f0adb3bdea9cf081026b9ac918e76d2fb302fa83e48676b38daa/data
+  conda:
+    linux/amd64:
+      lock_file: modules/local/vcfstatsplot/.conda-lock/linux_amd64-bd-68960cccb50bd6cd_1.txt
+    linux/arm64:
+      lock_file: modules/local/vcfstatsplot/.conda-lock/linux_arm64-bd-a72aff3dc8962307_1.txt

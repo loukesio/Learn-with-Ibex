@@ -1,0 +1,14 @@
+ibexvcf/
+├── main.nf
+├── nextflow.config
+├── nextflow_schema.json
+├── workflows/ibexvcf.nf
+├── subworkflows/local/
+│   └── vcf_filter_convert/
+├── modules/
+│   ├── nf-core/bcftools/view/
+│   ├── nf-core/vcf2maf/
+│   └── local/vcfstatsplot/
+├── bin/single_vcf_stats.py
+├── conf/  assets/  docs/  tests/
+└── .github/workflows/  (CI)

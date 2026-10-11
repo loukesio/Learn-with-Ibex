@@ -1,0 +1,2 @@
+sample,vcf,index
+tumor_5_vs_normal_5,/path/to/tumor_5_vs_normal_5.muse_VEP.ann.vcf.gz,/path/to/tumor_5_vs_normal_5.muse_VEP.ann.vcf.gz.tbi

@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/nf-core/ibexvcf/master/assets/schema_input.json",
+    "title": "nf-core/ibexvcf pipeline - params.input schema",
+    "description": "Schema for the file provided with params.input",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "sample": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "unique": true,
+                "errorMessage": "Unique sample name must be provided and cannot contain spaces",
+                "meta": ["id"]
+            },
+            "vcf": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.vcf\\.gz$",
+                "errorMessage": "VCF file must be gzipped and have extension '.vcf.gz'"
+            },
+            "index": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.vcf\\.gz\\.tbi$",
+                "errorMessage": "Index file must have extension '.vcf.gz.tbi'"
+            }
+        },
+        "required": ["sample", "vcf", "index"]
+    }
+}

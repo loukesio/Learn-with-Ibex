@@ -1,0 +1,17 @@
+> nf-core modules install bcftools/view
+Installing 'bcftools/view'
+Use the following statement to include this module:
+  include { BCFTOOLS_VIEW } from '../modules/nf-core/bcftools/view/main'
+
+> nf-core modules install vcf2maf
+Installing 'vcf2maf'
+  include { VCF2MAF } from '../modules/nf-core/vcf2maf/main'
+
+> nf-core modules list local
+  Module Name     Repository        SHA      Date
+  bcftools/view   nf-core/modules   feef374  2026-05-28
+  multiqc         nf-core/modules   98403d1  2026-05-26
+  vcf2maf         nf-core/modules   972faf6  2026-09-29
+
+> ls modules/nf-core/vcf2maf
+environment.yml  main.nf  meta.yml  tests/
