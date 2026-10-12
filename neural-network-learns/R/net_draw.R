@@ -19,16 +19,16 @@ draw_net <- function(net, X, epoch = NULL, hidden_pos = NULL) {
     geom_text(data = nodes[nodes$lab != "", ], aes(layer, y, label = lab), family = "Fira Sans", size = 4.2, fontface = "bold", colour = bg) +
     scale_colour_manual(values = c(`positive weight` = "#FF2D95", `negative weight` = "#1BE7FF")) +
     scale_linewidth_identity() + scale_alpha_identity() + scale_size_identity() +
-    scale_x_continuous(breaks = 1:3, labels = c("input\n2 features", sprintf("hidden layer\n%d neurons", nh), "output\nP(class B)"), limits = c(0.75, 3.25)) +
+    scale_x_continuous(breaks = 1:3, labels = c("input\n2 features", sprintf("hidden layer\n%d neurons", nh), "output\nP(class B)"), limits = c(0.85, 3.15)) +
     scale_y_continuous(limits = c(0.2, 16.8)) +
     labs(x = NULL, y = NULL, title = NULL,
          caption = "48 weights + 17 biases = 65 numbers to change · line width = weight size · glow = neuron activity") +
     guides(colour = guide_legend(override.aes = list(linewidth = 2.5, alpha = 1))) +
     theme_void(base_family = "Fira Sans") +
     theme(plot.background = element_rect(fill = bg, colour = NA), panel.background = element_rect(fill = bg, colour = NA),
-          legend.position = "top", legend.title = element_blank(), legend.text = element_text(colour = "white", size = 11),
+          legend.position = "top", legend.title = element_blank(), legend.text = element_text(colour = "white", size = 10), legend.margin = margin(0, 0, -6, 0),
           plot.title = element_text(colour = "#F5C400", face = "bold", size = 18, hjust = 0.02),
-          axis.text.x = element_text(colour = "white", face = "bold", size = 11, margin = margin(t = 6)),
-          plot.caption = element_text(colour = "#9AA3C4", size = 8.5, hjust = 0.5, margin = margin(t = 8)),
+          axis.text.x = element_text(colour = "white", face = "bold", size = 10, margin = margin(t = 2)),
+          plot.caption = element_text(colour = "#9AA3C4", size = 8, hjust = 0.5, margin = margin(t = 4)),
           plot.margin = margin(8, 10, 8, 10))
 }
