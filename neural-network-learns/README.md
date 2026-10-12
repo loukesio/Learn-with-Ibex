@@ -1,13 +1,13 @@
 # How a neural network learns · Instagram carousel
 
-9 square slides (1080×1080); slide 6 is a video (`output/slide-06.mp4`, 18 s, one frame per epoch) and `slide-06.png` is its still.
+9 square slides (1080×1080); slides 2 and 6 are videos (`output/slide-02.mp4`: the network diagram per epoch; `output/slide-06.mp4`: decision boundary + loss per epoch; 18 s each, 4 frames per second) with `slide-02.png` / `slide-06.png` as stills.
 The network is written in base R with no packages (`R/00_net.R`): 2 → 16 (tanh) → 1 (sigmoid), binary cross-entropy, mini-batch gradient descent,
 so every number on the slides comes from code you can read in a minute.
 
 ```
-R/            00_net.R (the network + training loop + plotting helpers), 01–07 one script per figure, render_all.R, theme_seq.R
+R/            00_net.R (the network + training loop + plotting helpers), net_draw.R (the dark neon network drawing), 01–07 one script per figure, render_all.R, theme_seq.R
 plots/        the six figures + run.rds (weights after every epoch) + overfit.rds
-slides/       slide-01..09.png, slide-06.mp4, caption.txt
+slides/       slide-01..09.png, slide-02.mp4, slide-06.mp4, caption.txt
 ```
 
 

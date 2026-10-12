@@ -1,8 +1,8 @@
-🧠 How a neural network learns: weights, loss, epochs, learning rate, overfitting. One tiny network trained live, every plot from that run, and slide 6 is a video of the 60 epochs.
+🧠 How a neural network learns: weights, loss, epochs, learning rate, overfitting. One tiny network trained live, every plot from that run. Two video slides: the weights changing (slide 2) and the decision boundary bending (slide 6), one frame per epoch.
 
 Swipe through 👉
 
-1️⃣ The network: 2 inputs, 16 hidden neurons, 1 output. Every line is a weight, a number that says how much one neuron listens to another. 65 numbers in total, and learning means changing them.
+1️⃣ The network, on video: 2 inputs, 16 hidden neurons, 1 output. Every line is a weight, a number that says how much one neuron listens to another. 65 numbers in total, and you can watch them change over 60 epochs: lines thicken, some flip colour, neurons light up.
 2️⃣ Forward pass: data in, prediction out. With random weights the network already answers, just badly: accuracy 63%, loss 0.65.
 3️⃣ Loss and backprop: the loss is one number for how wrong. Backpropagation finds, for each weight, which direction lowers it, and every weight takes a small step. That is one iteration. An epoch is one pass over all the data, 10 iterations here.
 4️⃣ Learning rate: the size of each step. 0.02 crawls, 0.5 is right, 5 bounces around.
