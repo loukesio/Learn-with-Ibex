@@ -42,8 +42,8 @@ Swipe through an episode below, or download the PDF.
 
 ## How a neural network learns
 
-Weights, forward pass, loss and backprop, learning rate, epochs (as a video), overfitting and early stopping, evaluation on unseen data.
-The network is 60 lines of base R with no packages, in [`neural-network-learns/R/00_net.R`](neural-network-learns/R/00_net.R); every figure comes from that run.
+Is this DNA variant disease-causing? Four facts in, one probability out. Weights (as a video), forward pass, loss and backprop, learning rate, epochs (as a video), overfitting and early stopping, evaluation on unseen data.
+The network is 70 lines of base R with no packages, in [`neural-network-learns/R/00_net.R`](neural-network-learns/R/00_net.R); every figure comes from that run.
 
 <p align="center">
   <img src="neural-network-learns/slides/slide-01.png" width="200">
