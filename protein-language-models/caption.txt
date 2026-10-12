@@ -2,9 +2,9 @@
 
 Swipe through 👉
 
-1️⃣ Proteins as text: a protein is a string of 20 letters. ESM-2 hides one letter at a time and learns to guess it, like a language model filling in a word. 8 million to 15 billion parameters.
-2️⃣ ESMFold: a structure head on ESM-2. One sequence in, a fold out in seconds, no alignment search. The ESM Atlas API folds up to about 400 residues for free.
-3️⃣ pLDDT: every residue gets a confidence from 0 to 100. Blue above 90 is reliable. Orange below 50 usually means the region is disordered in real life. Shown: human p53, folded core and floppy tails.
+1️⃣ Proteins as text: a protein is a chain of amino acids, 20 kinds, written as 20 letters (one link in the chain is called a residue). ESM-2 hides one letter at a time and learns to guess it, like a language model filling in a word. 8 million to 15 billion parameters.
+2️⃣ ESMFold: a structure head on ESM-2. One sequence in, a fold out in seconds, no alignment search. The ESM Atlas API folds chains up to about 400 amino acids for free.
+3️⃣ pLDDT: every amino acid in the chain gets its own confidence score from 0 to 100. Blue above 90 is reliable. Orange below 50 usually means that part of the protein is floppy in real life. Shown: human p53, folded core and floppy tails.
 4️⃣ Head to head: same GFP sequence. AlphaFold 2 builds an alignment first and gets the barrel at mean pLDDT 97. ESMFold skipped the alignment and is unsure at mean pLDDT 43, RMSD 5 Å between the two. Fast is not always right: read the confidence.
 5️⃣ PyMOL in 5 lines: load, show cartoon, select, show sticks, ray + png. Open source and scriptable. Every picture here came from a script.
 6️⃣ ESM3 (Science 2025) generates sequence, structure and function in one model and designed esmGFP, a working fluorescent protein only 58% identical to anything in nature. AlphaFold 3 (Nature 2024) predicts complexes with DNA, RNA and small molecules.
