@@ -40,6 +40,19 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## How a neural network learns
+
+Weights, forward pass, loss and backprop, learning rate, epochs (as a video), overfitting and early stopping, evaluation on unseen data.
+The network is 60 lines of base R with no packages, in [`neural-network-learns/R/00_net.R`](neural-network-learns/R/00_net.R); every figure comes from that run.
+
+<p align="center">
+  <img src="neural-network-learns/slides/slide-01.png" width="200">
+  <img src="neural-network-learns/slides/slide-02.png" width="200">
+  <img src="neural-network-learns/slides/slide-07.png" width="200">
+</p>
+
+---
+
 ## Protein language models
 
 ESM-2, ESMFold, pLDDT, AlphaFold 2 vs ESMFold on the same sequence, PyMOL in five lines, and ESM3 / AlphaFold 3.
