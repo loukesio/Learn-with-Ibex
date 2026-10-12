@@ -40,6 +40,19 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## Protein language models
+
+ESM-2, ESMFold, pLDDT, AlphaFold 2 vs ESMFold on the same sequence, PyMOL in five lines, and ESM3 / AlphaFold 3.
+Every structure is a real prediction or crystal structure rendered with open-source PyMOL; scripts, inputs and renders in [`protein-language-models/`](protein-language-models).
+
+<p align="center">
+  <img src="protein-language-models/slides/slide-01.png" width="200">
+  <img src="protein-language-models/slides/slide-04.png" width="200">
+  <img src="protein-language-models/slides/slide-05.png" width="200">
+</p>
+
+---
+
 ## Getting into nf-core (nf-core, part 2)
 
 How a pipeline is proposed, reviewed, transferred and released inside nf-core, in seven steps, with screenshots of the real pages:
