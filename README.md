@@ -42,7 +42,7 @@ Swipe through an episode below, or download the PDF.
 
 ## From protein to point cloud: embeddings, PCA and UMAP
 
-What an embedding is, why people run PCA or UMAP on it, and what that can and cannot tell you, told through one paper
+What an embedding is, PCA and UMAP, and four moves for exploring an embedding (neighbours, colour by what you know, vary the knobs, train a probe), told through one paper
 (Lomoio et al., Bioinformatics Advances 2026) and one protein, transthyretin. No model was run: the ESM2 vectors are the authors' own.
 Scripts, vectors and figures in [`protein-embeddings-umap/`](protein-embeddings-umap).
 

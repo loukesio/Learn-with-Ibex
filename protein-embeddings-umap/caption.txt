@@ -1,20 +1,22 @@
-🧬 From protein to point cloud: what an embedding is, why people run PCA or UMAP on it, and what that can and cannot tell you. One real paper, one real protein.
+🧬 From protein to point cloud: what an embedding is, and the four moves for exploring one. Real vectors from one real protein, transthyretin.
 
 Swipe through 👉
 
-1️⃣ 1,280 numbers: a protein language model turns every residue into a list of numbers it worked out during training. That list is the embedding. Nothing in it is named; what matters is that similar residues get similar lists.
-2️⃣ Context: the model reads the whole chain, so one mutation nudges every residue's vector a little. The mutated one moves most. That is the vector the paper keeps.
-3️⃣ PCA: rotate the cloud and keep the two widest axes. Honest distances, no randomness, faint clusters.
+1️⃣ 1,280 numbers: a protein language model turns every residue into a list of numbers it worked out during training. That list is the embedding. Nothing in it is named. What matters is that similar things get similar lists, so distance means something.
+2️⃣ Context: the model reads the whole chain, so one mutation nudges every residue's vector a little. The mutated one moves most.
+3️⃣ PCA: rotate the cloud, keep the two widest axes. Honest distances, no randomness, faint clusters.
 4️⃣ UMAP: find who is near whom in all 1,280 dimensions, then lay it out in two so neighbours stay neighbours. Clusters pop, gaps between clusters mean little.
-5️⃣ Distance as a score: "the further the vector moved, the worse the variant" is tempting. On transthyretin it is a coin flip, ROC-AUC 0.51.
-6️⃣ Seeds: four random starts, four different maps. Neighbourhoods survive, shapes do not. The paper repeats UMAP ten times for that reason.
-7️⃣ The paper's result: a classifier on the raw 1,280 numbers won (ROC-AUC 0.79) and was best calibrated. Squashing with UMAP first did not help (0.59). Use UMAP to look, the full vector to predict.
+5️⃣ Move 1, list the neighbours: before any plot, pick a point and ask who is closest. For V50M it is V50L, V50G, V50A, the other changes at the same residue. The space knows where you are in the protein first.
+6️⃣ Move 2, colour by what you know: colour the map by residue number and the islands make sense. Colour by disease and nothing separates. Now you know what the embedding encodes and what it does not.
+7️⃣ Move 3, poke the knobs: a new seed keeps the groups but changes the shape; too few neighbours shatters the map, too many melts it. A pattern that only shows at one setting is the setting, not the biology.
 
-Data: ESM2-650M embeddings of 134 ClinVar missense variants in transthyretin, shared by the authors of Lomoio et al., Bioinformatics Advances 2026 (MIT licence). No model was run for this post; every plot comes from their vectors. Code and vectors on GitHub: link in bio 🐐
+8️⃣ Move 4, train a probe: pictures show structure, a probe measures it. A simple classifier on the vectors, scored on held-out data. The source paper (Lomoio et al., Bioinformatics Advances 2026) tried distance in the UMAP plane, a classifier on all 1,280 numbers, and a classifier after UMAP to 10 dimensions: the full vector won, ROC-AUC 0.79 vs 0.59. Squash to look, not to predict. Sanity check: a randomly initialised model also puts similar sequences close, so compare against that baseline.
+
+No model was run for this post: the ESM2-650M vectors are the authors' own, 134 ClinVar variants of transthyretin, MIT licence. Code and vectors on GitHub: link in bio 🐐
 
 💾 Save this before your next UMAP
 🔁 Share it with someone who plots embeddings
 
-Which protein would you map first? Tell me in the comments 👇
+Which embedding would you explore first? Tell me in the comments 👇
 
-#ProteinLanguageModels #UMAP #Bioinformatics #MachineLearning #Genomics
+#ProteinLanguageModels #UMAP #Bioinformatics #MachineLearning #DataScience
