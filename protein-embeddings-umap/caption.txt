@@ -1,0 +1,20 @@
+🧬 From protein to point cloud: what an embedding is, why people run PCA or UMAP on it, and what that can and cannot tell you. One real paper, one real protein.
+
+Swipe through 👉
+
+1️⃣ 1,280 numbers: a protein language model turns every residue into a list of numbers it worked out during training. That list is the embedding. Nothing in it is named; what matters is that similar residues get similar lists.
+2️⃣ Context: the model reads the whole chain, so one mutation nudges every residue's vector a little. The mutated one moves most. That is the vector the paper keeps.
+3️⃣ PCA: rotate the cloud and keep the two widest axes. Honest distances, no randomness, faint clusters.
+4️⃣ UMAP: find who is near whom in all 1,280 dimensions, then lay it out in two so neighbours stay neighbours. Clusters pop, gaps between clusters mean little.
+5️⃣ Distance as a score: "the further the vector moved, the worse the variant" is tempting. On transthyretin it is a coin flip, ROC-AUC 0.51.
+6️⃣ Seeds: four random starts, four different maps. Neighbourhoods survive, shapes do not. The paper repeats UMAP ten times for that reason.
+7️⃣ The paper's result: a classifier on the raw 1,280 numbers won (ROC-AUC 0.79) and was best calibrated. Squashing with UMAP first did not help (0.59). Use UMAP to look, the full vector to predict.
+
+Data: ESM2-650M embeddings of 134 ClinVar missense variants in transthyretin, shared by the authors of Lomoio et al., Bioinformatics Advances 2026 (MIT licence). No model was run for this post; every plot comes from their vectors. Code and vectors on GitHub: link in bio 🐐
+
+💾 Save this before your next UMAP
+🔁 Share it with someone who plots embeddings
+
+Which protein would you map first? Tell me in the comments 👇
+
+#ProteinLanguageModels #UMAP #Bioinformatics #MachineLearning #Genomics

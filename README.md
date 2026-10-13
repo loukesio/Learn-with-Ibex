@@ -40,6 +40,20 @@ Swipe through an episode below, or download the PDF.
 
 ---
 
+## From protein to point cloud: embeddings, PCA and UMAP
+
+What an embedding is, why people run PCA or UMAP on it, and what that can and cannot tell you, told through one paper
+(Lomoio et al., Bioinformatics Advances 2026) and one protein, transthyretin. No model was run: the ESM2 vectors are the authors' own.
+Scripts, vectors and figures in [`protein-embeddings-umap/`](protein-embeddings-umap).
+
+<p align="center">
+  <img src="protein-embeddings-umap/slides/slide-01.png" width="200">
+  <img src="protein-embeddings-umap/slides/slide-05.png" width="200">
+  <img src="protein-embeddings-umap/slides/slide-08.png" width="200">
+</p>
+
+---
+
 ## How a neural network learns
 
 Is this DNA variant disease-causing? Four facts in, one probability out. Weights (as a video), forward pass, loss and backprop, learning rate, epochs (as a video), overfitting and early stopping, evaluation on unseen data.
